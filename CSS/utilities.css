@@ -1,19 +1,29 @@
 :root {
   --navy: #000c20;
   --orange: #fb4616;
-  --orange-overlay: #fb4616;
+  --orange-overlay: #e04317;
   --red: #cf0501;
   --blue: #0090ff;
   --light-grey: #f9f9f9;
   --blue-grey: #677294;
+  --dark-grey: #f4f4f4;
+  --dark-blue-grey: #1e2434;
+
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
+
   --font-head: "Inter", sans-serif;
   --font-body: "Roboto", sans-serif;
   --font-pop: "Poppins", sans-serif;
+
+  --h4-font-size: 2.5rem;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .text-center {
@@ -51,7 +61,8 @@ h6 {
   font-family: var(--font-head);
 }
 
-ul {
+ul,
+ol {
   padding: 0;
 }
 
@@ -65,6 +76,7 @@ a,
 input,
 textarea {
   color: inherit;
+  font: inherit;
   text-decoration: none;
 }
 
@@ -84,6 +96,7 @@ textarea {
 .btn {
   font-family: var(--font-pop);
   font-weight: 700;
+  cursor: pointer;
 }
 
 button {
@@ -114,11 +127,15 @@ span {
   flex: 12;
 }
 
-.round-1 {
+.round-0-25 {
+  border-radius: 0.25rem;
+}
+
+.round-0-5 {
   border-radius: 0.5em;
 }
 
-.round-2 {
+.round-1 {
   border-radius: 1em;
 }
 
@@ -151,4 +168,26 @@ section {
 .flex-col {
   display: flex;
   flex-direction: column;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 576px) {
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
 }

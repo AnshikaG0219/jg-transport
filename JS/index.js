@@ -11,3 +11,11 @@ console.log('in');
 // owlCarousel.owlCarousel({
 //     loop: true,
 // })
+
+$(".nav__toggle").click(function () {
+  $(".nav-list").toggleClass("active-nav")
+})
+
+$(".nav__toggle-close").click(function() {
+  $(".nav-list").removeClass("active-nav")
+})
