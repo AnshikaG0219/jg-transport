@@ -138,6 +138,7 @@ main {
   background-position: left center;
   color: #fff;
   overflow: hidden;
+  display: flex;
 }
 
 .banner-content {
@@ -466,6 +467,12 @@ footer .social-container i:hover {
 
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
+@media screen and (max-width: 1440px) {
+  footer .brand h3 {
+    font-size: 1.4rem;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .banner-content {
     padding-bottom: 4rem;
@@ -489,9 +496,16 @@ footer .social-container i:hover {
     justify-content: space-between;
     align-items: center;
   }
-
   .service-card {
   flex: 0 1 300px;
+  }
+
+  footer .brand h3 {
+    font-size: 1.2rem;
+    white-space: nowrap;
+  }
+  footer .brand p {
+    font-size: .8rem;
   }
 }
 
@@ -557,6 +571,11 @@ footer .social-container i:hover {
     right: 1.5rem;
     color: var(--orange);
   }
+
+  footer .brand p,
+  footer .col ul li {
+    font-size: .8rem;
+  }
 }
 
 /* For medium devices */
@@ -591,6 +610,29 @@ footer .social-container i:hover {
 
   .services .section-container {
     justify-content: center;
+  }
+
+  .about .section-container {
+    flex-direction: column-reverse;
+  }
+
+  .about .section-container .col,
+  .about .section-container .flex-col {
+    width: 100%;
+  }
+
+  .owl-nav {
+    width: 90%;
+  }
+
+  footer .flex-row {
+    gap: 1.6em;
+  }
+  footer h3, footer .brand h3 {
+    font-size: 1rem;
+  }
+  footer .brand .logo {
+    height: 3rem;
   }
 }
 
@@ -644,6 +686,45 @@ footer .social-container i:hover {
   .contact-details .container {
     gap: 2rem;
   }
+
+  .about .section-container {
+    width: 90%;
+  }
+
+  .services {
+    margin: 2em auto;
+  }
+  .service-card {
+    padding: 2em;
+  }
+
+  .owl-nav {
+    top: 39%;
+  }
+  .testimonial-avatar {
+    width: 6rem !important;
+    height: 6rem;
+  }
+  .owl-carousel .item {
+    width: 95%;
+  }
+  .owl-carousel .item p {
+    line-height: 1.6;
+    font-size: .8em;
+  }
+
+  footer .flex-row {
+    flex-direction: column;
+  }
+  .socials, .info {
+    width: 100%;
+  }
+  footer h3 {
+    line-height: normal;
+  }
+  .social-container {
+    margin-top: 1em;
+  }
 }
 
 /* For small devices */
@@ -665,5 +746,9 @@ footer .social-container i:hover {
   }
   .inner-container {
     gap: 3rem;
+  }
+  
+  .service-card {
+    padding: 1em;
   }
 }
